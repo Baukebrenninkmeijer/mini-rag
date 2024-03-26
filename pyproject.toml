@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "mini-rag"
+version = "0.1.0"
+description = "mini rag system used for searching annual reports"
+authors = ["Bauke Brenninkmeijer <bauke.brenninkmeijer@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+gradio = "^4.23.0"
+transformers = "^4.38.1"
+accelerate = "^0.28.0"
+haystack-ai = "^2.0.0"
+chromadb = "^0.4.19"
+chroma-haystack = "^0.15.0"
+sentence-transformers = "^2.6.1"
+ipykernel = "^6.29.3"
+ipywidgets = "^8.1.2"
+torch = {version = "^2.2.1+cu121", source = "torch"}
+torchvision = {version = "^0.17.1+cu121", source = "torch"}
+torchaudio = {version = "^2.2.1+cu121", source = "torch"}
+autoawq = "^0.2.4"
+pypdf = "^4.1.0"
+huggingface-hub = {extras = ["cli"], version = "^0.22.1"}
+datasets = "^2.18.0"
+
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
